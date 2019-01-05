@@ -17,36 +17,36 @@
      </el-col>
    </el-row>
   <!-- 内容表格 -->
-    <el-table :data="tableData" style="width: 100%">
-      <el-table-column prop="id" label="#" width="80"></el-table-column>
-      <el-table-column prop="username" label="姓名" width="100"></el-table-column>
-      <el-table-column prop="email" label="邮箱" width="150"></el-table-column>
-      <el-table-column prop="mobile" label="电话" width="150"></el-table-column>
-      <el-table-column label="创建日期" width="150">
-        <template slot-scope="scope">
-          {{scope.row.create_time|fmtDate}}
-        </template>
-      </el-table-column>
-      <el-table-column label="用户状态" width="100">
-        <template slot-scope="scope">
-          <el-switch
-            @change="changeState(scope.row)"
-            v-model="scope.row.mg_state"
-            active-color="#13ce66"
-            inactive-color="#ff4949">
-          </el-switch> 
-        </template>
-      </el-table-column>
-      <el-table-column prop label="操作">
-        <template slot-scope="scope">
-          <el-button type="primary" size="mini" plain icon="el-icon-edit" circle @click="showDiaEdit(scope.row)"></el-button>
-          <el-button type="danger"  size="mini" plain icon="el-icon-delete" circle
-          @click="showDeleConfig(scope.row)"></el-button>
-          <el-button type="success" size="mini" plain icon="el-icon-check" circle
-          @click="showRoleDia(scope.row)"></el-button>
-         </template>
-      </el-table-column>
-    </el-table>
+  <el-table :data="tableData" style="width: 100%">
+    <el-table-column prop="id" label="#" width="80"></el-table-column>
+    <el-table-column prop="username" label="姓名" width="100"></el-table-column>
+    <el-table-column prop="email" label="邮箱" width="150"></el-table-column>
+    <el-table-column prop="mobile" label="电话" width="150"></el-table-column>
+    <el-table-column label="创建日期" width="150">
+      <template slot-scope="scope">
+        {{scope.row.create_time|fmtDate}}
+      </template>
+    </el-table-column>
+    <el-table-column label="用户状态" width="100">
+      <template slot-scope="scope">
+        <el-switch
+          @change="changeState(scope.row)"
+          v-model="scope.row.mg_state"
+          active-color="#13ce66"
+          inactive-color="#ff4949">
+        </el-switch> 
+      </template>
+    </el-table-column>
+    <el-table-column prop label="操作">
+      <template slot-scope="scope">
+        <el-button type="primary" size="mini" plain icon="el-icon-edit" circle @click="showDiaEdit(scope.row)"></el-button>
+        <el-button type="danger"  size="mini" plain icon="el-icon-delete" circle
+        @click="showDeleConfig(scope.row)"></el-button>
+        <el-button type="success" size="mini" plain icon="el-icon-check" circle
+        @click="showRoleDia(scope.row)"></el-button>
+       </template>
+    </el-table-column>
+  </el-table>
   <!-- 分页 -->
   <el-pagination
       @size-change="handleSizeChange"

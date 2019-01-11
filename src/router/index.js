@@ -1,15 +1,18 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import {Message} from 'element-ui'
-import Login from '@/components/login.vue'
-import Home from '@/components/home.vue'
-import Users from '@/components/users.vue'
-import Rights from '@/components/rights.vue'
-import Roles from '@/components/roles.vue'
-import Goodslist from '@/components/goodslist.vue'
-import GoodsAdd from '@/components/goodsadd.vue'
-import Params from '@/components/params.vue'
-import Goodscate from '@/components/goodscate.vue'
+// const Foo = () => import('./foo.vue')
+const  Login = () => import ('@/components/login.vue')
+const  Home = () => import ('@/components/home.vue')
+const  Users = () => import ('@/components/users.vue')
+const  Rights = () => import ('@/components/rights.vue')
+const  Roles = () => import ('@/components/roles.vue')
+const  Goodslist = () => import ('@/components/goodslist.vue')
+const  GoodsAdd = () => import ('@/components/goodsadd.vue')
+const  Params = () => import ('@/components/params.vue')
+const  Goodscate = () => import ('@/components/goodscate.vue')
+const  Orders = () => import ('@/components/order.vue')
+const  Reports = () => import ('@/components/reports.vue')
 Vue.use(Router)
 
 const router = new Router({
@@ -52,6 +55,16 @@ const router = new Router({
         name: 'categories',
         path: '/categories',
         component: Goodscate
+      },
+      {
+        name: 'orders',
+        path: '/orders',
+        component: Orders
+      },
+      {
+        name: 'reports',
+        path: '/reports',
+        component: Reports
       }
       ]
     },
